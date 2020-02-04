@@ -52,5 +52,6 @@ namespace SortiranjeOsobaSeminarskiRad
 
             dataGridView1.DataSource = table;
         }
+
     }
 }
