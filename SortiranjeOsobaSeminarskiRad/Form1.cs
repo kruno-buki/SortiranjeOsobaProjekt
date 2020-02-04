@@ -64,5 +64,17 @@ namespace SortiranjeOsobaSeminarskiRad
             textBoxMRodenja.Text = "";
             textBoxDrzava.Text = "";
         }
+
+        private void buttonIzbrisi_Click(object sender, EventArgs e)
+        {
+            int indexRow;
+            indexRow = dataGridView1.CurrentCell.RowIndex;
+            if (MessageBox.Show("Do you want to Remove This Row", "Remove Row", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                dataGridView1.Rows.RemoveAt(indexRow);
+                MessageBox.Show("Red je izbrisan", "Remove Row", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
