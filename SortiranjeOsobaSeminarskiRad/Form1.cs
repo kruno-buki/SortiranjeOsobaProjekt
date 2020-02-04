@@ -12,7 +12,7 @@ namespace SortiranjeOsobaSeminarskiRad
 {
     public partial class Form1 : Form
     {
-        
+
 
         public Form1()
         {
@@ -47,22 +47,39 @@ namespace SortiranjeOsobaSeminarskiRad
             table.Rows.Add("Romanovska" + ", " + "Patricija", "Žena", "5.prosinca 1990", "Zagreb" + ", " + "Hrvatska");
             table.Rows.Add("Brane" + ", " + "Branislav", "Muškarac", "5.siječnja 1997", "Rijeka" + ", " + "Hrvatska");
             table.Rows.Add("Kraljević" + ", " + "Krunoslav", "Muškarac", "5.svibnja 1995", "Dubrovnik" + ", " + "Hrvatska");
-            table.Rows.Add("Svetlana" + ", " + "Tanja", "Žena", "13.srpnja 1990", "Zagreb" + ", " + "Hrvatska");
+            table.Rows.Add("Svjetlana" + ", " + "Tanja", "Žena", "13.srpnja 1990", "Zagreb" + ", " + "Hrvatska");
             table.Rows.Add("Knez" + ", " + "Borna", "Muškarac", "1.siječnja 1990", "Sisak" + ", " + "Hrvatska");
 
             dataGridView1.DataSource = table;
-        }
+
+
+                
+         }
+        
 
         private void buttonDodaj_Click(object sender, EventArgs e)
         {
-            table.Rows.Add(textBoxPrezime.Text + ", " + textBoxIme.Text, comboBoxSpol.Text, dateTimeDatumRodenja.Text, textBoxMRodenja.Text + ", " + textBoxDrzava.Text);
-            dataGridView1.DataSource = table;
-            textBoxIme.Text = "";
-            textBoxPrezime.Text = "";
-            comboBoxSpol.Text = "";
-            dateTimeDatumRodenja.Text = "";
-            textBoxMRodenja.Text = "";
-            textBoxDrzava.Text = "";
+            
+
+            if(textBoxIme.Text=="" || textBoxPrezime.Text == "" || comboBoxSpol.Text=="" 
+                || dateTimeDatumRodenja.Text=="" || textBoxMRodenja.Text == ""|| textBoxDrzava.Text == "")
+            {
+                MessageBox.Show("Potrebno je popunitit sva polja");
+            }
+            else
+            {
+                table.Rows.Add(textBoxPrezime.Text + ", " + textBoxIme.Text, comboBoxSpol.Text, dateTimeDatumRodenja.Text, textBoxMRodenja.Text + ", " + textBoxDrzava.Text);
+                dataGridView1.DataSource = table;
+                textBoxIme.Text = "";
+                textBoxPrezime.Text = "";
+                comboBoxSpol.Text = "";
+                dateTimeDatumRodenja.Text = "";
+                textBoxMRodenja.Text = "";
+                textBoxDrzava.Text = "";
+
+            }
+            
+           
         }
 
         private void buttonIzbrisi_Click(object sender, EventArgs e)
