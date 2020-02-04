@@ -34,13 +34,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxIme = new System.Windows.Forms.TextBox();
+            this.textBoxPrezime = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.comboBoxSpol = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,29 +105,21 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Država";
             // 
-            // textBox1
+            // textBoxIme
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(149, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 23);
-            this.textBox1.TabIndex = 2;
+            this.textBoxIme.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.textBoxIme.Location = new System.Drawing.Point(149, 44);
+            this.textBoxIme.Name = "textBoxIme";
+            this.textBoxIme.Size = new System.Drawing.Size(144, 23);
+            this.textBoxIme.TabIndex = 2;
             // 
-            // textBox2
+            // textBoxPrezime
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(149, 98);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(144, 23);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.textBox3.Location = new System.Drawing.Point(149, 165);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(144, 23);
-            this.textBox3.TabIndex = 2;
+            this.textBoxPrezime.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.textBoxPrezime.Location = new System.Drawing.Point(149, 98);
+            this.textBoxPrezime.Name = "textBoxPrezime";
+            this.textBoxPrezime.Size = new System.Drawing.Size(144, 23);
+            this.textBoxPrezime.TabIndex = 2;
             // 
             // textBox4
             // 
@@ -170,18 +162,27 @@
             this.button2.Text = "Izbriši";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // comboBoxSpol
+            // 
+            this.comboBoxSpol.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSpol.FormattingEnabled = true;
+            this.comboBoxSpol.Location = new System.Drawing.Point(149, 165);
+            this.comboBoxSpol.Name = "comboBoxSpol";
+            this.comboBoxSpol.Size = new System.Drawing.Size(144, 24);
+            this.comboBoxSpol.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 452);
+            this.Controls.Add(this.comboBoxSpol);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxPrezime);
+            this.Controls.Add(this.textBoxIme);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -205,13 +206,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxIme;
+        private System.Windows.Forms.TextBox textBoxPrezime;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBoxSpol;
     }
 }
 
