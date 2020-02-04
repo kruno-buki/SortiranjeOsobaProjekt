@@ -53,5 +53,16 @@ namespace SortiranjeOsobaSeminarskiRad
             dataGridView1.DataSource = table;
         }
 
+        private void buttonDodaj_Click(object sender, EventArgs e)
+        {
+            table.Rows.Add(textBoxPrezime.Text + ", " + textBoxIme.Text, comboBoxSpol.Text, dateTimeDatumRodenja.Text, textBoxMRodenja.Text + ", " + textBoxDrzava.Text);
+            dataGridView1.DataSource = table;
+            textBoxIme.Text = "";
+            textBoxPrezime.Text = "";
+            comboBoxSpol.Text = "";
+            dateTimeDatumRodenja.Text = "";
+            textBoxMRodenja.Text = "";
+            textBoxDrzava.Text = "";
+        }
     }
 }
