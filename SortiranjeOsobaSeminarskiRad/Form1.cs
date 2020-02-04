@@ -30,7 +30,7 @@ namespace SortiranjeOsobaSeminarskiRad
 
             table.Rows.Add("Mikec" + ", " + "Mirko", "Muškarac",
                 "15.prosinca 1989",
-                "Zagreb" + ","
+                "Zagreb" + ", "
                 + "Hrvatska");
             table.Rows.Add("Riba" + ", " + "Pero", "Muškarac", "5.rujna 1992", "Karlovac" + ", " + "Hrvatska");
             table.Rows.Add("Kvržica" + ", " + "Perica", "Muškarac", "5.siječnja 1998", "Samobor" + ", " + "Hrvatska");
@@ -75,6 +75,20 @@ namespace SortiranjeOsobaSeminarskiRad
                 dataGridView1.Rows.RemoveAt(indexRow);
                 MessageBox.Show("Red je izbrisan", "Remove Row", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int indexRow2 = e.RowIndex;
+
+            DataGridViewRow selectedRow = dataGridView1.Rows[indexRow2];
+
+            textBoxIme.Text = selectedRow.Cells[0].Value.ToString().Substring(selectedRow.Cells[0].Value.ToString().IndexOf(" ")).Trim(' ');
+            textBoxPrezime.Text = selectedRow.Cells[0].Value.ToString().Substring(0, selectedRow.Cells[0].Value.ToString().IndexOf(","));
+            comboBoxSpol.Text = selectedRow.Cells[1].Value.ToString();
+            dateTimeDatumRodenja.Text = selectedRow.Cells[2].Value.ToString();
+            textBoxMRodenja.Text = selectedRow.Cells[3].Value.ToString().Substring(0, selectedRow.Cells[3].Value.ToString().IndexOf(","));
+            textBoxDrzava.Text = selectedRow.Cells[3].Value.ToString().Substring(selectedRow.Cells[3].Value.ToString().IndexOf(" ")).Trim(' ');
         }
     }
 }
