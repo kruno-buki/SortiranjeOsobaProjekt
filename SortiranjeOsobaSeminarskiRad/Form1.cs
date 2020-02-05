@@ -52,9 +52,11 @@ namespace SortiranjeOsobaSeminarskiRad
 
             dataGridView1.DataSource = table;
 
+           
+                           
+            
 
-                
-         }
+        }
         
 
         private void buttonDodaj_Click(object sender, EventArgs e)
@@ -78,8 +80,10 @@ namespace SortiranjeOsobaSeminarskiRad
                 textBoxDrzava.Text = "";
 
             }
-            
+
            
+
+
         }
 
         private void buttonIzbrisi_Click(object sender, EventArgs e)
@@ -107,5 +111,6 @@ namespace SortiranjeOsobaSeminarskiRad
             textBoxMRodenja.Text = selectedRow.Cells[3].Value.ToString().Substring(0, selectedRow.Cells[3].Value.ToString().IndexOf(","));
             textBoxDrzava.Text = selectedRow.Cells[3].Value.ToString().Substring(selectedRow.Cells[3].Value.ToString().IndexOf(" ")).Trim(' ');
         }
+
     }
 }
