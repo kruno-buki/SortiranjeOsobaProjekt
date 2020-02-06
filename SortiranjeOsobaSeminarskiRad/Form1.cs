@@ -51,14 +51,8 @@ namespace SortiranjeOsobaSeminarskiRad
             table.Rows.Add("Knez" + ", " + "Borna", "Muškarac", "1.siječnja 1990", "Sisak" + ", " + "Hrvatska");
 
             dataGridView1.DataSource = table;
-
-           
-                           
-            
-
         }
         
-
         private void buttonDodaj_Click(object sender, EventArgs e)
         {
             
@@ -90,11 +84,11 @@ namespace SortiranjeOsobaSeminarskiRad
         {
             int indexRow;
             indexRow = dataGridView1.CurrentCell.RowIndex;
-            if (MessageBox.Show("Do you want to Remove This Row", "Remove Row", MessageBoxButtons.YesNo,
+            if (MessageBox.Show("Želite li obrisati red", "Obriši red", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 dataGridView1.Rows.RemoveAt(indexRow);
-                MessageBox.Show("Red je izbrisan", "Remove Row", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Red je izbrisan", "Obriši red", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -112,5 +106,14 @@ namespace SortiranjeOsobaSeminarskiRad
             textBoxDrzava.Text = selectedRow.Cells[3].Value.ToString().Substring(selectedRow.Cells[3].Value.ToString().IndexOf(" ")).Trim(' ');
         }
 
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBoxIme.Text = "";
+            textBoxPrezime.Text = "";
+            comboBoxSpol.Text = "";
+            dateTimeDatumRodenja.Text = "";
+            textBoxMRodenja.Text = "";
+            textBoxDrzava.Text = "";
+        }
     }
 }
